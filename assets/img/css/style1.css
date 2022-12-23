@@ -1,0 +1,419 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: thuộc tính set font cho cả web  */
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetical, Arial, sans-serif;
+}
+
+ /* Common */
+.clear {
+clear: both;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-white {
+color:#fff !important;
+}
+
+.row::after {
+    content: "";
+    display:block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px; 
+}
+.col-half {
+    width: 50%;
+}
+
+ /* Main */
+#main {
+    
+}
+
+#header {
+    height: 46px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {  
+    list-style-type: none;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav li a {
+    text-transform:uppercase;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    color: #fff;
+}
+
+#nav li a:hover {
+    background-color:#fff;
+    color: red;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/assets/img/christmas/christmas.jpeg) bottom center / cover no-repeat;;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 80%;
+    right: 400px;
+    color:#fff;
+    text-align: center;
+     width: 100%; 
+     
+}
+#slider .text-heading{
+    letter-spacing: 7px;
+    
+    font-weight: 500;
+    font-size: 70px;
+    
+}
+#slider .text-description{
+    font-size: 20px;
+    margin-top: 25px;
+}
+ 
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 100%;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    font-size: 18px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height:1.4;
+}
+
+#content .member-list {
+    
+    margin-top: 32px;
+}
+
+/* #content .member-name {
+    font-size: 15px;
+    list-style-type: none;
+    text-align: justify;
+} */
+
+#content .member-img {
+    width: 100%;x
+    height: 0;
+    margin-top: 15px;
+    border-radius: 4px;
+} 
+.link-member{
+    background-color: #385898;;
+    color: #fff;
+    padding: 5px;
+}
+
+.tour-section {
+    background-color: #fff;
+}
+
+.gift-section {
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+
+.gift-section h2 {
+    padding: 16px;
+    font-size: 32px;
+}
+.member-img {
+    text-align: center; 
+    margin-bottom: 8px;
+}
+
+.member-body {
+    background-color: #fff;
+    font-size: 18px;
+    margin: 0 85px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.member-body a {
+    text-decoration: none;
+}
+
+.member-body a:hover {
+    color: violet;
+}
+/* snow */
+.box-snow{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+.box-snow .snow{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.box-snow span{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    animation: snows 5s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+@keyframes snows{
+    0%{
+        transform: translateY(-100px) scale(0.2);
+    }
+    100%{
+        transform: translateY(100vh) scale(0.5);
+
+    }
+}
+.box-bgr .christmas-tree{
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 1%;
+}
+.box-bgr .christmas-tree img{
+    position: absolute;
+    width: 500px;
+    /* top: 50%; */
+}
+.box-text-noel{
+    position: relative;
+    width: 100%;
+}
+.box-bgr .box-text-noel .text-noel{
+    position: relative;
+    width: 350px;
+    height: 100vh;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -400px);
+    animation: textnoel 3s ease-in-out forwards;
+    transition: transform 1s;
+}
+@keyframes textnoel{
+    0%{
+        transform: translate(-50%, -400px);
+    }
+    20%{
+        transform: translate(-50%, 90px);
+    }
+    25%{
+        transform: translate(-50%, 95px);
+    }
+    30%{
+        transform: translate(-50%, 100px);
+    }
+    35%{
+        transform: translate(-50%, -20px);
+    }
+    45%{
+        transform: translate(-50%, 70px);
+    }
+    55%{
+        transform: translate(-50%, -10px);
+    }
+    65%{
+        transform: translate(-50%, 50px);
+    }
+    80%,90%{
+        transform: translate(-50%, 10px);
+    }
+    100%{
+        transform: translate(-50%, 10px) rotate(10deg);
+        transform-origin: top left;
+    }
+}
+.box-bgr .box-text-noel .text-noel img{
+    width: 350px;
+}
+.box-bgr .box-text-noel span{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 300px;
+    background: #333;
+    top: 0;
+    margin-top: -210px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    animation: textnoel1 3s ease-in-out forwards;
+}
+@keyframes textnoel1{
+    0%{
+        transform: translate(-50%, -400px);
+    }
+    20%{
+        transform: translate(-50%, 90px);
+    }
+    25%{
+        transform: translate(-50%, 95px);
+    }
+    30%{
+        transform: translate(-50%, 100px);
+    }
+    35%{
+        transform: translate(-50%, -20px);
+    }
+    45%{
+        transform: translate(-50%, 70px);
+    }
+    55%{
+        transform: translate(-50%, -10px);
+    }
+    65%{
+        transform: translate(-50%, 50px);
+    }
+    80%{
+        transform: translate(-50%, 0px);
+    }
+    100%{
+        transform: translate(-50%, 10px);
+    }
+}
+.house{
+    position: absolute;
+    width: 450px;
+    height: 100vh;
+    top: 15%;
+    right: 5%;
+}
+.house img{
+    position: absolute;
+    width: 450px;
+}
+section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.box-santa{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+.box-santa .santa-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.santa1{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, 300px);
+    animation: santa1 4s linear forwards;
+    animation-delay: 10s;
+}
+@keyframes santa1{
+    0%{
+        transform: translate(-50%, 300px);
+    }
+    20%,80%{
+        transform: translate(-50%, 0px);
+    }
+    95%,100%{
+        transform: translate(-50%, 300px);
+    }
+}
+.santa1 .image-santa{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.santa1 .image-santa img{
+    width: 100%;
+}
+.santa1 .image-santa-hand{
+    position: absolute;
+    width: 500px;
+    z-index: 1;
+    transform: translate(0px, 10px);
+    animation: santa-hand 0.7s infinite linear;
+}
+@keyframes santa-hand{
+    0%{
+        transform: rotate(-20deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+/* snow-end */
